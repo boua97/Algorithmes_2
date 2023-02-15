@@ -1,0 +1,65 @@
+
+//----------------------problem_1-----------------------------//
+ALGORITHME la somme des éléments d'un tableau
+VAR
+set_1 : ARRAY_OF INTEGER[7];
+set_2 : ARRAY_OF INTEGER[8];
+i,j : INTEGER;
+n,N,m,S1,S2 : INTEGER;
+BEGIN
+ 
+ //------------ demende de de tableau----------------------//
+        
+	 Write("donnez n,N");
+         Read(n,N);
+
+  //----------------------ramplire les deux tableau -------------//
+         Write("donneez les valeux de tableau T1");
+            FOR i FROM 0 TO n-1 STEP 1 DO
+           read(T1[i]);
+
+         Write("donneez les valeux de tableau T2");
+            FOR j FROM 0 TO N-1 STEP 1 DO
+           read(T1[i]);
+
+
+ k := 0
+ S1 := 0
+ //--------------chercher dans  le tableau T2 ----------//
+	FOR  i  FROM 0 TO n-1
+		FOR j FROM 0 TO n-1
+			IF ( T1[i] = T2[j] )
+				k :=  1;
+			END_if
+		END_FOR	
+            IF ( k = 0)
+			S1 :=  S1 + T1[i];
+		
+		END_IF
+		END_FOR	
+
+
+
+ k := 0
+ S2 := S1
+ // ************** chercher dans  le tableau T1************ 
+         FOR  i  FROM 0 TO  n-1
+		FOR j FROM 0 TO n-1
+			IF (T2[i] = T1[j] )
+				k :=  1;
+			END_if
+		END_FOR	
+
+		IF ( k = 0)
+			S2 :=  S2 + T2[i];
+			
+		END_IF
+		
+	END_FOR
+
+	WRITE (S2 );
+END
+     
+
+
+

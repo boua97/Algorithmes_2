@@ -1,0 +1,54 @@
+//------------------problem_2------------------//
+//Using Procedure.
+PROCEDURE dot_product(n)
+VAR
+    v1,v2 : INTEGER;
+    ps: INTEGER;
+BEGIN
+    Write("v1 and v2 in secc");
+    Read(v1)
+    Read(v2)
+
+    ps := v1 * v2;
+    n := ps%2;
+    IF (n = 0) THEN
+        Write("two vectors of given IR are orthogonal")
+    ELSE
+        Write("two vectors of given IR are not orthogonal")
+    END_IF
+END
+
+ALGORITHM algorithm_name
+VAR
+    n_pair : INTEGER;
+BEGIN
+    // procedure chech is the n pair
+    dot_product(n);
+END
+
+//Using Function.
+FUNCTION dot_productF(ps) : INTEGER
+VAR
+    v1,v2 : INTEGER;
+    ps: INTEGER;
+BEGIN
+    Write("v1 and v2 in secc");
+    Read(v1)
+    Read(v2)
+
+    ps := v1 * v2;
+    RETURN ps ;
+END
+
+ALGORITHM algorithm_name
+VAR
+    n_pair : INTEGER;
+BEGIN
+    n_pair := dot_product(ps)%2
+    IF (n_pair = 0) THEN
+        Write("two vectors of given IR are orthogonal")
+    ELSE
+        Write("two vectors of given IR are not orthogonal")
+    END_IF
+
+END
