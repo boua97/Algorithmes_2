@@ -27,6 +27,7 @@ BEGIN
  S1 := 0
  //--------------chercher dans  le tableau T2 ----------//
 	FOR  i  FROM 0 TO n-1
+		 k := 0
 		FOR j FROM 0 TO n-1
 			IF ( T1[i] = T2[j] )
 				k :=  1;
@@ -44,6 +45,7 @@ BEGIN
  S2 := S1
  // ************** chercher dans  le tableau T1************ 
          FOR  i  FROM 0 TO  n-1
+ 		k := 0
 		FOR j FROM 0 TO n-1
 			IF (T2[i] = T1[j] )
 				k :=  1;
